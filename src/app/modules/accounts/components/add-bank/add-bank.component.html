@@ -1,0 +1,97 @@
+<div class="container rounded bg-white mt-1 mb-1">
+  <div class="row">
+    <div class="col-md-5 border-right">
+      <form [formGroup]="bankDetailsForm" (ngSubmit)="saveBankDetails()">
+        <div class="p-3 py-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="text-right">Add Bank</h3>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12">
+              <label class="labels">Bank Name</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Enter Bank name"
+                value=""
+                formControlName="bank_name"
+              />
+            </div>
+            <div class="col-md-12">
+              <label class="labels">Bank Type</label>
+              <select class="form-control" formControlName="bank_type">
+                <option selected disabled>Select a Type</option>
+                <option value="General Bank">General Bank</option>
+                <option value="Mobile">Mobile</option>
+              </select>
+            </div>
+
+            <div class="col-md-12">
+              <label class="labels">Account Nubmers(A/C)</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Enter Accounts Numbers"
+                value=""
+                formControlName="ac_no"
+              />
+            </div>
+
+            <div class="col-md-12">
+              <label class="labels">Phone</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Phone"
+                value=""
+                formControlName="phone"
+              />
+            </div>
+            <div class="col-md-12">
+              <label class="labels">Branch</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Branch"
+                value=""
+                formControlName="branch"
+              />
+            </div>
+          </div>
+          <div class="mt-5 text-center">
+            <button class="btn btn-primary profile-button" type="submit">
+              Save Bank
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-7">
+      <div class="p-3 py-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="text-right text-center">Short Bank Overview</h3>
+        </div>
+        <div class="m-4">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>SL</th>
+                <th>Bank Name</th>
+                <th>Branch</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of allDetails; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ data.bank_name }}</td>
+                <td>{{ data.branch }}</td>
+                <td>{{ data.phone }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

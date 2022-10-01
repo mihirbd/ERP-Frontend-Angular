@@ -1,0 +1,180 @@
+<div class="container mt-1">
+  <table class="table table-borderless table-responsive card-1 p-4">
+    <thead>
+      <tr class="border-bottom">
+        <th>
+          <span class="ml-2">SL</span>
+        </th>
+        <th>
+          <span class="ml-2">Time</span>
+        </th>
+        <th>
+          <span class="ml-2">User Name</span>
+        </th>
+        <th>
+          <span class="ml-2">Role</span>
+        </th>
+        <th>
+          <span class="ml-2">Email</span>
+        </th>
+        <th>
+          <span class="ml-2">Mobile</span>
+        </th>
+
+        <th>
+          <span class="ml-4">Action</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-bottom" *ngFor="let user of allUser; let i = index">
+        <td>
+          <div class="p-2">
+            <span class="font-weight-bold">{{ i + 1 }}</span>
+          </div>
+        </td>
+        <td>
+          <div class="p-2">
+            <span class="d-block font-weight-bold">Tomorrow</span>
+            <small>2:30PM</small>
+          </div>
+        </td>
+        <td>
+          <div class="p-2 d-flex flex-row align-items-center mb-2">
+            <img [src]="user.image" width="40" class="rounded-circle" />
+            <div class="d-flex flex-column ml-2">
+              <span class="d-block font-weight-bold">{{ user.username }}</span>
+              <small class="text-muted">Pixel Electric Company Ltd</small>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="p-2">
+            <p *ngFor="let role of user.roles">
+              {{ role.name }}
+            </p>
+          </div>
+        </td>
+        <td>
+          <div class="p-2">
+            <span class="font-weight-bold">{{ user.email }}</span>
+          </div>
+        </td>
+        <td>
+          <div class="p-2 d-flex flex-column">
+            <span>{{ user.phone }}</span>
+          </div>
+        </td>
+        <td>
+          <div class="p-2 icons">
+            <a href=""><i class="fa-regular fa-eye"></i></a>
+            <a class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              ><i class="fa-regular fa-pen-to-square"></i
+            ></a>
+            <a class="btn" (click)="delete(user.id)"
+              ><i class="fa fa-trash"></i
+            ></a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Edit User Information
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row mt-3">
+          <div class="col-md-12">
+            <label class="labels">User Name</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="enter User name"
+              value=""
+            />
+          </div>
+          <div class="col-md-12">
+            <label class="labels">Role</label>
+            <select class="form-control">
+              <option value="" selected>Select Role</option>
+              <option></option>
+              <!-- *ngFor="let role of allRole" [value]="role.id">
+                    {{ role.name }} -->
+            </select>
+          </div>
+
+          <div class="col-md-12">
+            <label class="labels">Email ID</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="enter email id"
+              value=""
+            />
+          </div>
+
+          <div class="col-md-12">
+            <label class="labels">Phone</label
+            ><input
+              type="text"
+              class="form-control"
+              placeholder="Phone"
+              value=""
+            />
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12">
+              <label class="labels">Password</label
+              ><input
+                type="password"
+                class="form-control"
+                placeholder="Enter Passwords"
+                value=""
+              />
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label class="labels">Image</label
+            ><input
+              type="file"
+              class="form-control"
+              value=""
+              placeholder="state"
+            />
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save User</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

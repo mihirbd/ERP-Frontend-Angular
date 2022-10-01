@@ -1,0 +1,166 @@
+<div class="col-md-12 border-right">
+  <div class="row text-center">
+    <div class="text-center">
+      <nav aria-label="breadcrumb" class="bg-body rounded-3 p-3">
+        <ol class="breadcrumb mb-0" style="margin-left: 40%">
+          <li
+            class="breadcrumb-item active text-center margin-0"
+            aria-current=" page"
+          >
+            <b>Enter Your Expenditure</b>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <form [formGroup]="expenditureForms" (ngSubmit)="saveExpenditure()">
+    <div class="p-3">
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <label class="labels"
+            >Enter Date <span class="text-danger">*</span></label
+          >
+          <input
+            type="date"
+            class="form-control"
+            placeholder="Enter Date"
+            value=""
+            formControlName="date_time"
+          />
+        </div>
+        <div class="col-md-4">
+          <label class="labels"
+            >Purpose <span class="text-danger">*</span></label
+          >
+          <input
+            class="form-control"
+            placeholder="Enter Purpose"
+            list="purposelist"
+            formControlName="purpose"
+          />
+          <datalist id="purposelist">
+            <option *ngFor="let plist of allPurpose" [value]="plist.id">
+              {{ plist.purpose }}
+            </option>
+          </datalist>
+        </div>
+        <div class="col-md-4">
+          <label class="labels"
+            >Expenditure To <span class="text-danger">*</span></label
+          >
+          <input
+            class="form-control"
+            placeholder="Enter Recever Name"
+            list="employeelist"
+            formControlName="payment_to"
+          />
+          <datalist id="employeelist">
+            <option *ngFor="let elist of allEmployee" [value]="elist.id">
+              {{ elist.employee_name }}
+            </option>
+          </datalist>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <label class="labels"
+            >Expenditure By <span class="text-danger">*</span></label
+          >
+          <input
+            class="form-control"
+            placeholder="Enter GiverName"
+            list="userlist"
+            formControlName="payment_by"
+          />
+          <datalist id="userlist">
+            <option *ngFor="let ulist of allUser">
+              {{ ulist.username }}
+            </option>
+          </datalist>
+        </div>
+        <div class="col-md-4">
+          <label class="labels"
+            >Select Bank <span class="text-danger">*</span>
+          </label>
+          <input
+            class="form-control"
+            placeholder="Enter Payment Method"
+            list="banklist"
+            formControlName="payment_method"
+          />
+          <datalist id="banklist">
+            <option *ngFor="let blist of allDetails">
+              {{ blist.bank_name }}
+            </option>
+          </datalist>
+        </div>
+        <div class="col-md-4">
+          <label class="labels"
+            >Enter Ammount <span class="text-danger">*</span></label
+          >
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">৳</span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              placeholder="Enter Ammount"
+              formControlName="payment_amount"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <div class="">
+            <label class="labels"
+              >Expenditure Type<span class="text-danger">*</span></label
+            >
+            <select class="form-control" required formControlName="cost_type">
+              <option selected value="Regular">Regular</option>
+              <option value="Fixed">Fixed</option>
+            </select>
+          </div>
+          <div class="">
+            <label class="labels">Select Image</label>
+            <input
+              type="file"
+              class="form-control"
+              placeholder="Enter Date"
+              value=""
+              formControlName="payment_token"
+            />
+          </div>
+          <br />
+          <p>Recheck all the Information Before Submiting Expenditure</p>
+          <hr />
+
+          <div class="mt-3 text-center">
+            <button class="btn btn-primary profile-button" type="submit">
+              Save Expenditure
+            </button>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <label class="labels"
+            >Expenditure Description <span class="text-danger">*</span></label
+          >
+          <textarea
+            type="text-area"
+            class="form-control"
+            value=""
+            placeholder="Enter Expenditure Sammary"
+            cols="30"
+            rows="10"
+            formControlName="payment_details"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

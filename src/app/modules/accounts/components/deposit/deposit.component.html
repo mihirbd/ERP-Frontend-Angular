@@ -1,0 +1,162 @@
+<div class="col-md-12">
+  <div class="row text-center">
+    <div class="text-center">
+      <nav aria-label="breadcrumb" class="bg-body rounded-3 p-3">
+        <ol class="breadcrumb mb-0" style="margin-left: 40%">
+          <li
+            class="breadcrumb-item active text-center margin-0"
+            aria-current=" page"
+          >
+            <b>Enter Your Deposit</b>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- " -->
+  <form [formGroup]="depositForms" (ngSubmit)="savedeposit()">
+    <div class="p-3">
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <label class="labels"
+            >Enter Date <span class="text-danger">*</span></label
+          >
+          <input
+            type="date"
+            class="form-control"
+            placeholder="Enter Date"
+            value=""
+            formControlName="date_time"
+          />
+        </div>
+        <div class="col-md-4">
+          <label class="labels"
+            >Purpose <span class="text-danger">*</span></label
+          >
+          <input
+            class="form-control"
+            placeholder="Enter Purpose"
+            list="purposelist"
+            formControlName="purpose"
+          />
+          <datalist id="purposelist">
+            <option *ngFor="let plist of allPurpose" [value]="plist.id" >
+              {{ plist.purpose }}
+            </option>
+            <!-- <option>Loan</option>
+            <option>Investor Money</option>
+            <option>Share holder MOney</option>
+            <option>Others</option> -->
+          </datalist>
+        </div>
+        <div class="col-md-4">
+          <label class="labels"
+            >Deposit To <span class="text-danger">*</span></label
+          >
+          <input
+            class="form-control"
+            placeholder="Enter Recever"
+            list="userlist"
+            formControlName="deposit_to"
+          />
+          <datalist id="userlist">
+            <option *ngFor="let ulist of allUser">
+              {{ ulist.username }}
+            </option>
+          </datalist>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <label class="labels"
+            >Deposit By <span class="text-danger">*</span></label
+          >
+          <input
+            class="form-control"
+            placeholder="Enter Deposit Method"
+            list="employeelist"
+            formControlName="deposit_by"
+          />
+          <datalist id="employeelist">
+            <option *ngFor="let elist of allEmployee" [value]="elist.id">
+              {{ elist.employee_name }}
+            </option>
+          </datalist>
+        </div>
+        <div class="col-md-4">
+          <label class="labels"
+            >Select Bank <span class="text-danger">*</span>
+          </label>
+          <input
+            class="form-control"
+            placeholder="Enter Deposit Method"
+            list="banklist"
+            formControlName="deposit_method"
+          />
+          <datalist id="banklist">
+            <option *ngFor="let blist of allDetails">
+              {{ blist.bank_name }}
+            </option>
+          </datalist>
+        </div>
+        <div class="col-md-4">
+          <label class="labels"
+            >Enter Ammount <span class="text-danger">*</span></label
+          >
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">৳</span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Amount (to the nearest dollar)"
+              formControlName="deposit_amount"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text">.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-4">
+          <div class="">
+            <label class="labels">Select Image</label>
+            <input
+              type="file"
+              class="form-control"
+              placeholder="Enter Date"
+              value=""
+              formControlName="deposit_token"
+            />
+          </div>
+          <br />
+          <br />
+          <p>Recheck all the Information Before Submiting Deposit</p>
+          <hr />
+
+          <div class="mt-5 text-center">
+            <button class="btn btn-primary profile-button" type="submit">
+              Save Deposit
+            </button>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <label class="labels"
+            >Deposit Description <span class="text-danger">*</span></label
+          >
+          <textarea
+            type="text-area"
+            class="form-control"
+            value=""
+            placeholder="Enter Deposit Sammary"
+            cols="30"
+            rows="10"
+            formControlName="deposit_details"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
