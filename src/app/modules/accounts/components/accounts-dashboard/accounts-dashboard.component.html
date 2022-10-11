@@ -158,13 +158,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLinkActive="active">
+                <a
+                  class="nav-link"
+                  routerLinkActive="active"
+                  routerLink="/accounts/deposit-history"
+                >
                   <i class="nav-icon fas fa-history"></i>
                   <p>&nbsp; Deposit History</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" routerLinkActive="active">
+                <a
+                  routerLink="/accounts/expenditure-history"
+                  class="nav-link"
+                  routerLinkActive="active"
+                >
                   <i class="nav-icon fas fa-history"></i>
                   <!-- <i class=" nav-icon fab fa-creative-commons-nc" aria-hidden="true"></i> -->
                   <p>&nbsp; Expenditure History</p>
@@ -182,25 +190,37 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link" routerLinkActive="active">
+                <a
+                  routerLink="/accounts/daily-transection"
+                  class="nav-link"
+                  routerLinkActive="active"
+                >
                   <i class="fa fa-exchange nav-icon" aria-hidden="true"></i>
                   <p>Daily Transections</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" routerLinkActive="active">
+                <a
+                  routerLink="/accounts/weekly-transection"
+                  class="nav-link"
+                  routerLinkActive="active"
+                >
                   <i class="fa fa-exchange nav-icon" aria-hidden="true"></i>
                   <p>Weekly Transections</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link" routerLinkActive="active">
+              <li routerLink="/accounts/monthly-transection" class="nav-item">
+                <a class="nav-link" routerLinkActive="active">
                   <i class="fa fa-exchange nav-icon" aria-hidden="true"></i>
                   <p>Monthly Transections</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" routerLinkActive="active">
+                <a
+                  routerLink="/accounts/yearly-transection"
+                  class="nav-link"
+                  routerLinkActive="active"
+                >
                   <i class="fa fa-exchange nav-icon" aria-hidden="true"></i>
                   <p>Yearly Transections</p>
                 </a>
@@ -274,6 +294,12 @@
               <li class="nav-item">
                 <a href="#" class="nav-link" routerLinkActive="active">
                   <i class="far fa-circle nav-icon"></i>
+                  <p>Assests Buy</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" routerLinkActive="active">
+                  <i class="far fa-circle nav-icon"></i>
                   <p>House Rent & Bill</p>
                 </a>
               </li>
@@ -310,7 +336,7 @@
           </li>
           <li class="nav-item has-treeview">
             <a
-              routerLink="/accounts/show-Bank"
+              routerLink="/accounts/bank-transection"
               class="nav-link"
               routerLinkActive="active"
             >

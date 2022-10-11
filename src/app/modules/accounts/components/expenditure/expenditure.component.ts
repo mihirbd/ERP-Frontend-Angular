@@ -63,13 +63,13 @@ export class ExpenditureComponent implements OnInit {
       this.api.saveExpenditure(deposit).subscribe(
         (res) => {
           alert("Deposit Save successfully")
-          this.router.navigateByUrl("/accounts/user-list");
+          this.router.navigateByUrl("/accounts/expenditure-history");
           this.expenditureForms.reset();
         })
     }
   }
 
-  //inser Image Base64
+  //insert Image Base64
   cardImageBase64: any;
   isImageSaved?: boolean;
   CreateBase64String(fileInput: any) {

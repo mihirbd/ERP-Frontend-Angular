@@ -20,6 +20,7 @@ export class DepositComponent implements OnInit {
   allDetails: any;
   allUser: any;
   allEmployee: any;
+  
 
   constructor(private api: DepositService, private api2: PurposeService, private router: Router, private api3: BankService, private api4: AddUserService, private api5: EmployeeService) { }
 
@@ -31,7 +32,7 @@ export class DepositComponent implements OnInit {
   }
 
   depositForms = new FormGroup({
-    'date_time': new FormControl('', Validators.required),
+    'date_time': new FormControl('' ),
     'purpose': new FormControl('', Validators.required),
     'deposit_to': new FormControl('', Validators.required),
     'deposit_by': new FormControl('', Validators.required),
@@ -45,9 +46,9 @@ export class DepositComponent implements OnInit {
   savedeposit() {
     if (this.depositForms.valid) {
       let value = this.depositForms.value;
-
+      const now = new Date();
       let deposit: Deposit = {
-        date_time: value.date_time || '',
+        date_time: now.toISOString() || '',
         purpose: { id: Number(value.purpose) || '' },
         deposit_to: value.deposit_to ||'',
         deposit_by: {id:Number(value.deposit_by)},
@@ -61,7 +62,7 @@ export class DepositComponent implements OnInit {
       this.api.saveDeposit(deposit).subscribe(
         (res) => {
           alert("Deposit Save successfully")
-          this.router.navigateByUrl("/accounts/user-list");
+          this.router.navigateByUrl("/accounts/deposit-history");
           this.depositForms.reset();
         })
     }

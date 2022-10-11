@@ -1,1 +1,215 @@
-<p>deposit-history works!</p>
+<div class="col-md-12">
+  <div class="row text-center">
+    <div class="text-center">
+      <nav aria-label="breadcrumb" class="bg-body rounded-3 p-3">
+        <ol class="breadcrumb mb-0" style="margin-left: 40%">
+          <li
+            class="breadcrumb-item active text-center margin-0"
+            aria-current=" page"
+          >
+            <b>Deposit History</b>
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="container mt-1">
+    <table class="table table-borderless table-responsive card-1 p-4 border">
+      <thead>
+        <tr class="border-bottom bg-primary">
+          <th>
+            <span class="ml-2">SL</span>
+          </th>
+          <th>
+            <span class="ml-2">Date</span>
+          </th>
+          <th>
+            <span class="ml-2">Deposit Purpose</span>
+          </th>
+          <th>
+            <span class="ml-2">Deposit TO</span>
+          </th>
+          <th>
+            <span class="ml-2">Deposit BY</span>
+          </th>
+          <th>
+            <span class="ml-2">Method</span>
+          </th>
+
+          <th>
+            <span class="ml-4">Amount</span>
+          </th>
+
+          <th>
+            <span class="ml-4">Action</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="border-bottom"
+          *ngFor="let deposit of allDeposit; let i = index"
+        >
+          <td>
+            <div class="p-2">
+              <span class="font-weight-bold">{{ i + 1 }}</span>
+            </div>
+          </td>
+          <td>
+            <div class="p-2">
+              <span class="d-block font-weight-bold">{{
+                deposit.date_time
+              }}</span>
+            </div>
+          </td>
+          <td>
+            <div class="p-2 d-flex flex-row align-items-center mb-2">
+              <div class="d-flex flex-column ml-2">
+                <span class="d-block font-weight-bold">{{
+                  deposit.purpose.purpose
+                }}</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="p-2">
+              <span>{{ deposit.deposit_to }}</span>
+            </div>
+          </td>
+          <td>
+            <div class="p-2">
+              <span class="font-weight-bold">{{
+                deposit.deposit_by.employee_name
+              }}</span>
+            </div>
+          </td>
+          <td>
+            <div class="p-2 d-flex flex-column">
+              <span>{{ deposit.deposit_method }}</span>
+            </div>
+          </td>
+          <td>
+            <div class="p-2 d-flex flex-column">
+              <span>{{ deposit.deposit_amount }}</span>
+            </div>
+          </td>
+          <td>
+            <div class="p-2 icons">
+              <a href=""><i class="fa-regular fa-eye"></i></a>
+              <a class="btn"><i class="fa fa-trash"></i></a>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="bg-info">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Total:</td>
+          <td>{{ allAmount }}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Edit User Information
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div class="row mt-3">
+            <div class="col-md-12">
+              <label class="labels">User Name</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="enter User name"
+                value=""
+              />
+            </div>
+            <div class="col-md-12">
+              <label class="labels">Role</label>
+              <select class="form-control">
+                <option value="" selected>Select Role</option>
+                <option></option>
+                <!-- *ngFor="let role of allRole" [value]="role.id">
+                      {{ role.name }} -->
+              </select>
+            </div>
+
+            <div class="col-md-12">
+              <label class="labels">Email ID</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="enter email id"
+                value=""
+              />
+            </div>
+
+            <div class="col-md-12">
+              <label class="labels">Phone</label
+              ><input
+                type="text"
+                class="form-control"
+                placeholder="Phone"
+                value=""
+              />
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-12">
+                <label class="labels">Password</label
+                ><input
+                  type="password"
+                  class="form-control"
+                  placeholder="Enter Passwords"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label class="labels">Image</label
+              ><input
+                type="file"
+                class="form-control"
+                value=""
+                placeholder="state"
+              />
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save User</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

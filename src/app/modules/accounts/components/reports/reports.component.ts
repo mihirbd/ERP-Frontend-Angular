@@ -12,4 +12,11 @@ export class ReportsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+  getDate() { 
+    const now = new Date();
+    console.log(now.toISOString());
+  }
+  
+
 }

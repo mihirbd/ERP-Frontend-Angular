@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ExpenditureService } from '../services/expenditure.service';
 
 @Component({
   selector: 'app-expenditure-history',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpenditureHistoryComponent implements OnInit {
 
-  constructor() { }
-
+  
+  constructor(private api:ExpenditureService, http:Router) { }
+  allExpenditure: any;
   ngOnInit(): void {
+    this.getDeposit();
   }
+
+  getDeposit() {
+    this.api.getExpenditure().subscribe((data) => { this.allExpenditure = data; });
+   }
+  
+  delete() { }
+
 
 }

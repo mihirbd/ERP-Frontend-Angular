@@ -28,6 +28,10 @@ export class ExpenditureService {
     return this.http.get(`${this.filterUrl}/${types}`);
   }
 
+  //get data from Expendidure using Expendidure Date
+  getExpenditureByDate(date: any): Observable<any> {
+    return this.http.get(`${this.filterUrl}/${date}`);
+  }
 //-----------------------------------------------------------------------------
   
   //Save data in Expendidure

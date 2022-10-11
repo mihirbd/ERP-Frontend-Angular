@@ -22,6 +22,11 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { AddPurposeComponent } from './components/add-purpose/add-purpose.component';
 import { DepositHistoryComponent } from './components/deposit-history/deposit-history.component';
 import { ExpenditureHistoryComponent } from './components/expenditure-history/expenditure-history.component';
+import { DailyTransectionComponent } from './components/daily-transection/daily-transection.component';
+import { WeeklyTransectionComponent } from './components/weekly-transection/weekly-transection.component';
+import { MonthlyTransectionComponent } from './components/monthly-transection/monthly-transection.component';
+import { YearlyTransectionComponent } from './components/yearly-transection/yearly-transection.component';
+import { BankTransectionComponent } from './components/bank-transection/bank-transection.component';
 @NgModule({
   declarations: [
     AccountsDashboardComponent,
@@ -38,7 +43,12 @@ import { ExpenditureHistoryComponent } from './components/expenditure-history/ex
     UserListComponent,
     AddPurposeComponent,
     DepositHistoryComponent,
-    ExpenditureHistoryComponent
+    ExpenditureHistoryComponent,
+    DailyTransectionComponent,
+    WeeklyTransectionComponent,
+    MonthlyTransectionComponent,
+    YearlyTransectionComponent,
+    BankTransectionComponent
   ],
   imports: [
     CommonModule,
