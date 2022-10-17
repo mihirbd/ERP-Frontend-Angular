@@ -79,32 +79,34 @@
       <div class="col-md-3">
         <div class="card-counter primary">
           <i class="fa-solid fa-money-check-dollar"></i>
-          <span class="count-numbers">1243567&ensp;৳</span>
+          <span class="count-numbers">{{OpeningdepositBalance-OpeningExpenditureBalance}}&ensp;৳</span>
           <span class="count-name">Opening Balance</span>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="card-counter danger">
-          <i class="fa-solid fa-circle-xmark"></i>
-          <span class="count-numbers">59934&ensp;৳</span>
-          <span class="count-name">Total Expenditure</span>
         </div>
       </div>
 
       <div class="col-md-3">
         <div class="card-counter success">
           <i class="fa-solid fa-hand-holding-dollar"></i>
-          <span class="count-numbers">6875457&ensp;৳</span>
+          <span class="count-numbers">{{depositAmountByDate}}&ensp;৳</span>
           <span class="count-name">Total Deposit</span>
         </div>
       </div>
 
       <div class="col-md-3">
+        <div class="card-counter danger">
+          <i class="fa-solid fa-circle-xmark"></i>
+          <span class="count-numbers">{{expenditureAmountByDate}}&ensp;৳</span>
+          <span class="count-name">Total Expenditure</span>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-3">
         <div class="card-counter info">
           <i class="fa-solid fa-plus-minus"></i>
-          <span class="count-numbers">355678&ensp;৳</span>
-          <span class="count-name">Remaining Balance</span>
+          <span class="count-numbers">{{allAmount-allExpenditureAmount}}&ensp;৳</span>
+          <span class="count-name">Total Balance</span>
         </div>
       </div>
     </div>
@@ -292,26 +294,21 @@
           <div class="price-card">
             <h2>Depost History</h2>
             <ul class="pricing-offers">
-              <table class="table">
+              <table class="table" style="margin-bottom: 0px">
                 <thead>
                   <tr>
                     <th>SL</th>
                     <th>Purpose</th>
-                    <th>Ammounts</th>
+                    <th>Amounts</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let deposit of allDeposit; let i = index">
-                    <ng-container *ngIf="i > allDeposit.length - 4">
+                    <ng-container *ngIf="i > allDeposit.length - 5">
                       <td>{{ i + 1 }}</td>
                       <td>{{ deposit.purpose.purpose }}</td>
                       <td>{{ deposit.deposit_amount }}</td>
                     </ng-container>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>Total</td>
-                    <td>679809068</td>
                   </tr>
                 </tbody>
               </table>
@@ -322,26 +319,21 @@
           <div class="price-card featured">
             <h2>Expenditure History</h2>
             <ul class="pricing-offers">
-              <table class="table">
+              <table class="table" style="margin-bottom: 0px">
                 <thead>
                   <tr>
                     <th>SL</th>
                     <th>Purpose</th>
-                    <th>Ammounts</th>
+                    <th>Amounts</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let expenditure of allExpenditure; let j = index">
-                    <ng-container *ngIf="j > allDeposit.length - 4">
+                    <ng-container *ngIf="j > allExpenditure.length - 5">
                       <td>{{ j + 1 }}</td>
                       <td>{{ expenditure.purpose.purpose }}</td>
                       <td>{{ expenditure.payment_amount }}</td>
                     </ng-container>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>Total</td>
-                    <td>686798098</td>
                   </tr>
                 </tbody>
               </table>
@@ -351,36 +343,31 @@
 
         <div class="col-md-4">
           <div class="price-card">
-            <h2>Transection Overview</h2>
+            <h2>Transection View</h2>
             <ul class="pricing-offers">
-              <table class="table">
+              <table class="table" style="margin-bottom: 0px">
                 <thead>
                   <tr>
-                    <th>SL</th>
                     <th>Section</th>
-                    <th>Ammounts</th>
+                    <th>Amounts</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>1</td>
                     <td>Opening</td>
-                    <td>3475878</td>
+                    <td>{{OpeningdepositBalance-OpeningExpenditureBalance}}</td>
                   </tr>
                   <tr>
-                    <td>2</td>
                     <td>Deposit</td>
-                    <td>3475878</td>
+                    <td>{{depositAmountByDate}}</td>
                   </tr>
                   <tr>
-                    <td>3</td>
                     <td>Expenditure</td>
-                    <td>35566576</td>
+                    <td>{{expenditureAmountByDate}}</td>
                   </tr>
                   <tr>
-                    <td></td>
                     <td>Remaining</td>
-                    <td>363745767</td>
+                    <td>{{allAmount-allExpenditureAmount}}</td>
                   </tr>
                 </tbody>
               </table>

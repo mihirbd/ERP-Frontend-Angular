@@ -14,6 +14,8 @@ export class DepositService {
   filterUrl = this.baseUrl + "filter";
   deleteUrl = this.baseUrl + "delete/";
   totalUrl = this.baseUrl + "filter/amount/";
+  amount = this.baseUrl + "amount";
+  opening = this.baseUrl + "filter/openingAmount";
 
   constructor(private http: HttpClient) { }
 
@@ -22,6 +24,15 @@ export class DepositService {
     return this.http.get(`${this.getUrl}`);
   }
 
+  //get data from deposit by Obserbable from api
+  getOpenigBalance(): Observable<any> {
+    return this.http.get(`${this.opening}`);
+  }
+
+  //get Amount from deposit using deposit Date
+  getAmountByDate(date: any): Observable<any> {
+    return this.http.get(`${this.amount}/${date}`);
+  }
 
   //get data from deposit using deposit type
   getDepositByType(type: any): Observable<any> {
@@ -32,6 +43,11 @@ export class DepositService {
   //get data from deposit using deposit Date
   getDepositByDate(date: any): Observable<any> {
     return this.http.get(`${this.filterUrl}/${date}`);
+  }
+
+  //get data from deposit using deposit DateBetween
+  getDepositByDateBetween(date: any, date2:any): Observable<any> {
+    return this.http.get(`${this.filterUrl}/${date}/${date2}`);
   }
 
 //-----------------------------------------------------------------------------

@@ -4,21 +4,14 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"
-          ><i class="fas fa-bars"></i
-        ></a>
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
     </ul>
 
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
-        <input
-          class="form-control form-control-navbar"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" />
         <div class="input-group-append">
           <button class="btn btn-navbar" type="submit">
             <i class="fas fa-search"></i>
@@ -79,13 +72,8 @@
         </a> -->
 
     <a class="brand-link">
-      <img
-        src="../../../../../assets/img/pixel.png"
-        alt="Pixel Accounts
-            "
-        class="brand-image elevation-3"
-        style="opacity: 0.8"
-      />
+      <img src="../../../../../assets/img/pixel.png" alt="Pixel Accounts
+            " class="brand-image elevation-3" style="opacity: 0.8" />
       <span class="brand-text font-weight-light">Accounts</span>
     </a>
     <!-- Sidebar -->
@@ -103,12 +91,7 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul
-          class="nav nav-pills nav-sidebar flex-column"
-          data-widget="treeview"
-          role="menu"
-          data-accordion="false"
-        >
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                    with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
@@ -121,11 +104,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/balance-sheet"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/balance-sheet" class="nav-link" routerLinkActive="active">
                   <!-- <mat-icon>add_home</mat-icon> -->
 
                   <i class="nav-icon fa fa-calculator" aria-hidden="true"></i>
@@ -134,45 +113,26 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/deposit"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/deposit" class="nav-link" routerLinkActive="active">
                   <!-- <mat-icon>monetization_on</mat-icon> -->
                   <i class="nav-icon fa fa-dollar" aria-hidden="true"></i>
                   <p>&nbsp; Deposit</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="expenditure"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
-                  <i
-                    class="nav-icon fab fa-creative-commons-nc"
-                    aria-hidden="true"
-                  ></i>
+                <a routerLink="expenditure" class="nav-link" routerLinkActive="active">
+                  <i class="nav-icon fab fa-creative-commons-nc" aria-hidden="true"></i>
                   <p>&nbsp; Expenditure</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  routerLinkActive="active"
-                  routerLink="/accounts/deposit-history"
-                >
+                <a class="nav-link" routerLinkActive="active" routerLink="/accounts/deposit-history">
                   <i class="nav-icon fas fa-history"></i>
                   <p>&nbsp; Deposit History</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/expenditure-history"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/expenditure-history" class="nav-link" routerLinkActive="active">
                   <i class="nav-icon fas fa-history"></i>
                   <!-- <i class=" nav-icon fab fa-creative-commons-nc" aria-hidden="true"></i> -->
                   <p>&nbsp; Expenditure History</p>
@@ -180,6 +140,36 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link" routerLinkActive="active">
+              <i class="nav-icon fa fa-shopping-cart" aria-hidden="true"></i>
+              <p>
+                Sales Accounts
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a routerLink="/accounts/daily-transection" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-angle-double-right nav-icon" aria-hidden="true"></i>
+                  <p>Deposit By Employee</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/accounts/weekly-transection" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-angle-double-right nav-icon" aria-hidden="true"></i>
+                  <p>Deposit By Dealler</p>
+                </a>
+              </li>
+              <li routerLink="/accounts/monthly-transection" class="nav-item">
+                <a class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-angle-double-right nav-icon" aria-hidden="true"></i>
+                  <p>Deposit By Distributor</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link" routerLinkActive="active">
               <i class="nav-icon fa fa-bar-chart"></i>
@@ -190,47 +180,35 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/daily-transection"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/daily-transection" class="nav-link" routerLinkActive="active">
                   <i class="fa fa-exchange nav-icon" aria-hidden="true"></i>
                   <p>Daily Transections</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/weekly-transection"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/weekly-transection" class="nav-link" routerLinkActive="active">
                   <i class="fa fa-exchange nav-icon" aria-hidden="true"></i>
                   <p>Weekly Transections</p>
                 </a>
               </li>
-              <li routerLink="/accounts/monthly-transection" class="nav-item">
-                <a class="nav-link" routerLinkActive="active">
+              <li class="nav-item">
+                <a routerLink="/accounts/monthly-transection" class="nav-link" routerLinkActive="active">
                   <i class="fa fa-exchange nav-icon" aria-hidden="true"></i>
                   <p>Monthly Transections</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/yearly-transection"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/yearly-transection" class="nav-link" routerLinkActive="active">
                   <i class="fa fa-exchange nav-icon" aria-hidden="true"></i>
                   <p>Yearly Transections</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="#" class="nav-link" routerLinkActive="active">
                   <i class="fa fa-exchange nav-icon" aria-hidden="true"></i>
                   <p>Total Transections</p>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </li>
 
@@ -238,24 +216,24 @@
             <a href="#" class="nav-link" routerLinkActive="active">
               <i class="nav-icon fa fa-sort-alpha-asc"></i>
               <p>
-                Sorting
+                Sort & Filtering
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link" routerLinkActive="active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Deposit By Purpose</p>
+                <a routerLink="/accounts/deposit-sort" class="nav-link" routerLinkActive="active">
+                  <i class="fa fa-sort nav-icon" aria-hidden="true"></i>
+                  <p>Deposit Sorting</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link" routerLinkActive="active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Deposit By Person</p>
+                  <i class="fa fa-sort-desc nav-icon" aria-hidden="true"></i>
+                  <p>Expenditure Sorting</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="#" class="nav-link" routerLinkActive="active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Deposit By Bank</p>
@@ -278,12 +256,12 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Expenditure By Bank</p>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </li>
 
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link" routerLinkActive="active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-donate"></i>
               <p>
                 Fixed Cost
@@ -292,37 +270,27 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link" routerLinkActive="active">
+                <a routerLink="/accounts/fixed-cost" class="nav-link" routerLinkActive="active" (click)="filterIni(15)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Assests Buy</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" routerLinkActive="active">
+                <a routerLink="/accounts/fixed-cost" class="nav-link" (click)="filterIni(12)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>House Rent & Bill</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link" routerLinkActive="active">
+                <a routerLink="/accounts/fixed-cost" class="nav-link" (click)="filterIni(13)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Advanced Salary</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/add-user"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/fixed-cost" class="nav-link" (click)="filterIni(1)">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Salary List</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link" routerLinkActive="active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Other</p>
                 </a>
               </li>
             </ul>
@@ -335,11 +303,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a
-              routerLink="/accounts/bank-transection"
-              class="nav-link"
-              routerLinkActive="active"
-            >
+            <a routerLink="/accounts/bank-transection" class="nav-link" routerLinkActive="active">
               <i class="fa-solid fa-money-bill-transfer nav-icon"></i>
               <p>Bank Transections</p>
             </a>
@@ -354,43 +318,33 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/add-bank"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/add-bank" class="nav-link" routerLinkActive="active">
                   <i class="fa fa-bank nav-icon"></i>
                   <p>Add Bank</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a routerLink="/accounts/add-employee" class="nav-link" routerLinkActive="active">
+                  <i class="fas fa-user-plus nav-icon"></i>
+                  <p>Add Employee</p>
+                </a>
+              </li>
 
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/company-info"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/company-info" class="nav-link" routerLinkActive="active">
                   <i class="fa-solid fa-building nav-icon"></i>
                   <p>Add Company</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/add-purpose"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/add-purpose" class="nav-link" routerLinkActive="active">
                   <i class="fa fa-list-alt nav-icon"></i>
                   <p>Add Purpose</p>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/settings"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/settings" class="nav-link" routerLinkActive="active">
                   <i class="fa-solid fa-link nav-icon"></i>
                   <p>Other</p>
                 </a>
@@ -407,21 +361,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/user-list"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/user-list" class="nav-link" routerLinkActive="active">
                   <i class="fas fa-users nav-icon"></i>
                   <p>Show Users</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a
-                  routerLink="/accounts/add-user"
-                  class="nav-link"
-                  routerLinkActive="active"
-                >
+                <a routerLink="/accounts/add-user" class="nav-link" routerLinkActive="active">
                   <i class="fa fa-plus nav-icon"></i>
                   <p>Add User</p>
                 </a>
@@ -445,10 +391,8 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong
-      >Copyright &copy; 2022
-      <a routerLink="/accounts/home">Pixel Accounts</a>.</strong
-    >
+    <strong>Copyright &copy; 2022
+      <a routerLink="/accounts/home">Pixel Accounts</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block"><b>Version</b> 1.0.0</div>
   </footer>

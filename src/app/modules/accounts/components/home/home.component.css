@@ -196,11 +196,11 @@ p.price span:before {
 }
 
 .pricing-offers {
-    padding: 0 0 10px;
+    padding: 0 0 0 0px;
 }
 
 .pricing-offers li {
-    padding: 0 0 16px;
+    padding: 0 0 0 0px;
     line-height: 18px;
 }
 

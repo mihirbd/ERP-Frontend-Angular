@@ -27,6 +27,13 @@ import { WeeklyTransectionComponent } from './components/weekly-transection/week
 import { MonthlyTransectionComponent } from './components/monthly-transection/monthly-transection.component';
 import { YearlyTransectionComponent } from './components/yearly-transection/yearly-transection.component';
 import { BankTransectionComponent } from './components/bank-transection/bank-transection.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { AddSellerComponent } from './components/add-seller/add-seller.component';
+import { ShowEmployeeComponent } from './components/show-employee/show-employee.component';
+import { DepByEmpComponent } from './components/dep-by-emp/dep-by-emp.component';
+import { DepositSortComponent } from './components/deposit-sort/deposit-sort.component';
+import { ExpenditureSortComponent } from './components/expenditure-sort/expenditure-sort.component';
+import { FixedCostComponent } from './components/fixed-cost/fixed-cost.component';
 @NgModule({
   declarations: [
     AccountsDashboardComponent,
@@ -48,7 +55,14 @@ import { BankTransectionComponent } from './components/bank-transection/bank-tra
     WeeklyTransectionComponent,
     MonthlyTransectionComponent,
     YearlyTransectionComponent,
-    BankTransectionComponent
+    BankTransectionComponent,
+    AddEmployeeComponent,
+    AddSellerComponent,
+    ShowEmployeeComponent,
+    DepByEmpComponent,
+    DepositSortComponent,
+    ExpenditureSortComponent,
+    FixedCostComponent
   ],
   imports: [
     CommonModule,

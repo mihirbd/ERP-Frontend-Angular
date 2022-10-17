@@ -3,10 +3,7 @@
     <div class="text-center">
       <nav aria-label="breadcrumb" class="bg-body rounded-3 p-3">
         <ol class="breadcrumb mb-0" style="margin-left: 40%">
-          <li
-            class="breadcrumb-item active text-center margin-0"
-            aria-current=" page"
-          >
+          <li class="breadcrumb-item active text-center margin-0" aria-current=" page">
             <b>Expenditure History</b>
           </li>
         </ol>
@@ -24,7 +21,7 @@
             <span class="ml-2">Date</span>
           </th>
           <th>
-            <span class="ml-2">Expenditure Purpose</span>
+            <span class="ml-2"> Purpose</span>
           </th>
           <th>
             <span class="ml-2">Expenditure TO</span>
@@ -46,10 +43,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr
-          class="border-bottom"
-          *ngFor="let expenditure of allExpenditure; let i = index"
-        >
+        <tr class="border-bottom" *ngFor="let expenditure of allExpenditure; let i = index">
           <td>
             <div class="p-2">
               <span class="font-weight-bold">{{ i + 1 }}</span>
@@ -113,36 +107,20 @@
   </div>
 
   <!-- Modal -->
-  <div
-    class="modal fade"
-    id="exampleModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">
             Edit User Information
           </h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="row mt-3">
             <div class="col-md-12">
-              <label class="labels">User Name</label
-              ><input
-                type="text"
-                class="form-control"
-                placeholder="enter User name"
-                value=""
-              />
+              <label class="labels">User Name</label><input type="text" class="form-control"
+                placeholder="enter User name" value="" />
             </div>
             <div class="col-md-12">
               <label class="labels">Role</label>
@@ -155,52 +133,26 @@
             </div>
 
             <div class="col-md-12">
-              <label class="labels">Email ID</label
-              ><input
-                type="text"
-                class="form-control"
-                placeholder="enter email id"
-                value=""
-              />
+              <label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id"
+                value="" />
             </div>
 
             <div class="col-md-12">
-              <label class="labels">Phone</label
-              ><input
-                type="text"
-                class="form-control"
-                placeholder="Phone"
-                value=""
-              />
+              <label class="labels">Phone</label><input type="text" class="form-control" placeholder="Phone" value="" />
             </div>
             <div class="row mt-3">
               <div class="col-md-12">
-                <label class="labels">Password</label
-                ><input
-                  type="password"
-                  class="form-control"
-                  placeholder="Enter Passwords"
-                  value=""
-                />
+                <label class="labels">Password</label><input type="password" class="form-control"
+                  placeholder="Enter Passwords" value="" />
               </div>
             </div>
             <div class="col-md-12">
-              <label class="labels">Image</label
-              ><input
-                type="file"
-                class="form-control"
-                value=""
-                placeholder="state"
-              />
+              <label class="labels">Image</label><input type="file" class="form-control" value="" placeholder="state" />
             </div>
           </div>
 
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
               Close
             </button>
             <button type="button" class="btn btn-primary">Save User</button>

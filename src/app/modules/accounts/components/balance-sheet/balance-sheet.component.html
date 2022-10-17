@@ -1,76 +1,99 @@
-<div class="container">
+<div class="col-md-12">
+    <div class="row text-center">
+        <div class="text-center">
+            <nav aria-label="breadcrumb" class="bg-body rounded-3 p-3">
+                <ol class="breadcrumb mb-0" style="margin-left: 40%">
+                    <li class="breadcrumb-item active text-center margin-0" aria-current=" page">
+                        <b>Enter Closing Amounts</b>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- " -->
+    <form [formGroup]="balanceSheetForm" (ngSubmit)="saveBalanceSheet()">
+        <div class="p-3">
+            <div class="row mt-2">
+                <div class="col-md-3">
+                    <label class="labels">Opening Balance <span class="text-danger">*</span></label>
+                    <input class="form-control" placeholder="Enter Opening Balance" formControlName="openingBalance" />
+                </div>
+                <div class="col-md-3">
+                    <label class="labels">Deposit <span class="text-danger">*</span></label>
+                    <input class="form-control" placeholder="Enter Deposit" formControlName="deposit" />
+                </div>
+                <div class="col-md-3">
+                    <label class="labels">Expenditure <span class="text-danger">*</span></label>
+                    <input class="form-control" placeholder="Enter Expenditure" formControlName="expenditure" />
+                </div>
+                <div class="col-md-3">
+                    <label class="labels">Total Balance <span class="text-danger">*</span></label>
+                    <input class="form-control" placeholder="Total Balance" formControlName="totalBalance" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mt-4 text-center">
+                        <button class="btn btn-primary profile-button" type="submit">
+                            Save Balance
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 
-    <div class="table md-12">
-        <table class="table table-responsive table-borderless margin-0">
 
+    <div class="container mt-1">
+        <div class="row text-center">
+            <div class="text-center">
+                <nav aria-label="breadcrumb" class="bg-body rounded-3 p-3">
+                    <ol class="breadcrumb mb-0" style="margin-left: 40%">
+                        <li class="breadcrumb-item active text-center margin-0" aria-current=" page">
+                            <b>Balance Sheet History</b>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <table class="table table-borderless table-responsive card-1 p-4 border">
             <thead>
-                <tr class="bg-light">
-                    <th scope="col" width="5%">SL</th>
-                    <th scope="col" width="20%">Date</th>
-                    <th scope="col" width="10%">Status</th>
-                    <th scope="col" width="20%">Customer</th>
-                    <th scope="col" width="20%">Purchased</th>
-                    <th scope="col"><span>Revenue</span></th>
+                <tr class="border-bottom bg-gray">
+                    <th>
+                        <span class="ml-2">SL</span>
+                    </th>
+                    <th>
+                        <span class="ml-2">Date</span>
+                    </th>
+                    <th>
+                        <span class="ml-2">Opening Amount</span>
+                    </th>
+                    <th>
+                        <span class="ml-2">Deposit Amount</span>
+                    </th>
+                    <th>
+                        <span class="ml-2">Expenditure Amount</span>
+                    </th>
+                    <th>
+                        <span class="ml-2">Total Balance</span>
+                    </th>
+                    <th>
+                        <span class="ml-4">Action</span>
+                    </th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-
-                    <td>12</td>
-                    <td>1 Oct, 21</td>
-                    <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
-                    <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"> Althan Travis</td>
-                    <td>Wirecard for figma</td>
-                    <td class="text-end"><span class="fw-bolder">$0.99</span> <i class="fa fa-ellipsis-h  ms-2"></i>
-                    </td>
-                </tr>
-
-                <tr>
-
-                    <td>14</td>
-                    <td>12 Oct, 21</td>
-                    <td><i class="fa fa-dot-circle-o text-danger"></i><span class="ms-1">Failed</span></td>
-                    <td><img src="https://i.imgur.com/nmnmfGv.png" width="25"> Tomo arvis</td>
-                    <td>Altroz furry</td>
-                    <td class="text-end"><span class="fw-bolder">$0.19</span> <i class="fa fa-ellipsis-h  ms-2"></i>
-                    </td>
-                </tr>
-
-
-                <tr>
-
-                    <td>17</td>
-                    <td>1 Nov, 21</td>
-                    <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
-                    <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"> Althan Travis</td>
-                    <td>Apple Macbook air</td>
-                    <td class="text-end"><span class="fw-bolder">$1.99</span> <i class="fa fa-ellipsis-h  ms-2"></i>
-                    </td>
-                </tr>
-
-
-                <tr>
-
-                    <td>90</td>
-                    <td>19 Oct, 21</td>
-                    <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
-                    <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"> Travis head</td>
-                    <td>Apple Macbook Pro</td>
-                    <td class="text-end"><span class="fw-bolder">$9.99</span> <i class="fa fa-ellipsis-h  ms-2"></i>
-                    </td>
-                </tr>
-
-
-                <tr>
-                    <td>12</td>
-                    <td>1 Oct, 21</td>
-                    <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Paid</span></td>
-                    <td><img src="https://i.imgur.com/nmnmfGv.png" width="25"> Althan Travis</td>
-                    <td>Wirecard for figma</td>
-                    <td class="text-end"><span class="fw-bolder">$0.99</span> <i class="fa fa-ellipsis-h  ms-2"></i>
-                    </td>
+                <tr *ngFor="let value of balanceSheet; let i=index">
+                    <td>{{i+1}}</td>
+                    <td>{{value.dateTime}}</td>
+                    <td>{{value.openingBalance}}</td>
+                    <td>{{value.deposit}}</td>
+                    <td>{{value.expenditure}}</td>
+                    <td>{{value.totalBalance}}</td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
     </div>
+
 </div>

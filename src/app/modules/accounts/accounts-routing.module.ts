@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountsDashboardComponent } from './components/accounts-dashboard/accounts-dashboard.component';
 import { AddBankComponent } from './components/add-bank/add-bank.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { AddPurposeComponent } from './components/add-purpose/add-purpose.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { BalanceSheetComponent } from './components/balance-sheet/balance-sheet.component';
@@ -9,9 +10,11 @@ import { BankTransectionComponent } from './components/bank-transection/bank-tra
 import { CompanyInfoComponent } from './components/company-info/company-info.component';
 import { DailyTransectionComponent } from './components/daily-transection/daily-transection.component';
 import { DepositHistoryComponent } from './components/deposit-history/deposit-history.component';
+import { DepositSortComponent } from './components/deposit-sort/deposit-sort.component';
 import { DepositComponent } from './components/deposit/deposit.component';
 import { ExpenditureHistoryComponent } from './components/expenditure-history/expenditure-history.component';
 import { ExpenditureComponent } from './components/expenditure/expenditure.component';
+import { FixedCostComponent } from './components/fixed-cost/fixed-cost.component';
 import { HomeComponent } from './components/home/home.component';
 import { MonthlyTransectionComponent } from './components/monthly-transection/monthly-transection.component';
 import { ReportsComponent } from './components/reports/reports.component';
@@ -44,6 +47,9 @@ const routes: Routes = [
       { path: 'monthly-transection', component: MonthlyTransectionComponent },
       { path: 'yearly-transection', component: YearlyTransectionComponent },
       { path: 'bank-transection', component: BankTransectionComponent },
+      { path: 'add-employee', component: AddEmployeeComponent },
+      { path: 'deposit-sort', component: DepositSortComponent },
+      { path: 'fixed-cost', component: FixedCostComponent },
       { path: '', redirectTo: '/accounts/home', pathMatch: 'full' },
     ]
   }
